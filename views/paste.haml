@@ -1,0 +1,5 @@
+%a{:href=>"/message/#{locals[:sha]}"}view your message
+%br
+
+%h3 COPY THIS URL AND PASTE IT FOR THE WORLD
+%input{:class=>"copynpaste", :type=>"text", :value=>"http://localhost:4567/message/#{locals[:sha]}"}

@@ -1,0 +1,18 @@
+%h1= locals[:message]
+
+%script{:src=>"http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+:javascript
+  var colors = ["red","green","white","blue","orange","grey","yellow","black"]
+  var blacknwhite = ["black", "white"]
+  // TODO add others
+  function flicker(){
+    for (var i in colors) {
+      $("html").css("background", colors[Math.floor(Math.random()*colors.length)])
+      $("h1").css("color", blacknwhite[Math.floor(Math.random()*blacknwhite.length)])
+    }
+  }
+  
+  $(document).ready(function(){
+    $("h1").css({"font-size":"300px","font-family":"Helvetica","font-weight":"bold"})
+    setInterval("#{locals[:style]}()", 60 )
+  })
