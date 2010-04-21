@@ -1,6 +1,6 @@
-%form{:action=>"/", :method=>"POST"}
+%form.blowitup{:action=>"/", :method=>"POST"}
   %textarea{:name=>"message"}
-  %select{:name=>"style"}
-    %option{:value=>"flicker"}flicker
-    / TODO: add others
-  %input{:type=>"submit", :value=>"POST"}
+  /%select{:name=>"style"}
+  /%option{:value=>"flicker"}flicker
+  / TODO: add others
+  %input.button{:type=>"submit", :value=>"POST"}

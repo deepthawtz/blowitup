@@ -1,4 +1,9 @@
-%h BLOWITUP MESSAGE STATS
-%h3= "Total Messages: #{locals[:total]}"
-%ul
-  = locals[:report]
+
+.stats
+  %h3= "Total Messages: #{locals[:total]}"
+  %ul
+    = locals[:report]
+
+:javascript
+  $("li:odd").css("background-color", "#ddd")
+  $("li:even").css("background-color", "#eee")

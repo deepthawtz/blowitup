@@ -1,15 +1,16 @@
 !!! 5
-%html
+%html{:charset=>"utf-8"}
   %head
-    %link{:href=>"/css/all.css"}
-  %header
-    %h1 BLOWITUP
-    %h3 Saywhatchugottasay
-  
-  %body
-    = yield
-  
-  %footer
-    %p Copyright &copy; 2010 Ghettochip Industries
+    %title BLOWITUP&trade; :: saywhatchugottasez
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>"/css/all.css"}
     %script{:src=>"http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
-    %script{:src=>"/js/app.js"}
+  %body
+    %header
+      %a{:href=>"/"}
+        %h1 BLOWITUP
+
+    = yield
+
+    %footer
+      %p Copyright &copy; 2010 Dylan Clendenin &#8226; a <a href="http://ghettochip.com/">Ghettochip Labs</a> joint
+      %script{:src=>"/js/app.js"}

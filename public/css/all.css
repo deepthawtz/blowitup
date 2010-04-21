@@ -1,0 +1,82 @@
+html {
+  background-color:#EEE582;
+  font-family:"Monaco";
+}
+body {
+  text-align:center;
+}
+header a {
+  color:#C4F9FC;
+  font-size:34pt;
+  letter-spacing:-8px;
+  text-decoration:none;
+}
+header a:hover {
+  text-shadow: rgba(10, 10, 10, 0.5) 1px 2px 2px;
+}
+a {
+  color:red;
+}
+.blowitup {
+  margin:0 auto;
+  width:625px;
+}
+.blowitup textarea {
+  float:left;
+  border:6px solid #A8F4DD;
+  margin:40px;
+  padding:12px;
+  font-size:30pt;
+  width:550px;
+  color:red;
+  font-family:"Courier";
+  font-weight:bold;
+  letter-spacing:-1px;
+}
+.blowitup textarea:focus {
+  background-color:#E8FBFF;
+}
+.blowitup .button {
+  float:right;
+  cursor:pointer;
+  color:#fff;
+  font-family:'Lucida Grande';
+  letter-spacing:1px;
+  font-size:14pt;
+  font-weight:bold;
+  border:2px solid #999;
+  background-color: rgba(108, 191, 255, .9);
+  vertical-align:middle;
+  text-align:center;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  padding:8px;
+}
+.copynpaste {
+  width:420px;
+  font-size:14pt;
+}
+.stats {
+  margin:0 auto;
+  width:1200px;
+}
+.stats ul {
+  border: 3px solid #333;
+  background-color:#333;
+}
+.stats em {
+  color:#999;
+}
+.stats li .views {
+  color:#26B6E7;
+}
+.stats li {
+  list-style:none;
+  padding:4px;
+  text-align:left;
+}
+footer {
+  clear:both;
+  margin:400px auto;
+  width:580px;
+}

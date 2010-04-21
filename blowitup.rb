@@ -11,12 +11,10 @@ end
 post "/" do
   message = {
     :message => params["message"].upcase,
-    :style => params["style"],
-    :views => 0,
     :created => Time.now
   }
   
-  sha = Digest::SHA1.hexdigest("#{ message[:message] + message[:style] }").slice 0, 8
+  sha = Digest::SHA1.hexdigest("#{message[:message]}").slice 0, 8
   @redis.hset "blowitup:messages", sha, Marshal.dump(message)
   @redis.bgsave
   
@@ -41,7 +39,7 @@ get "/stats" do
   @redis.hgetall("blowitup:messages").each do |k,v|
     m = Marshal.load v
     views = @redis.hget "blowitup:messages:views", k
-    report << "<li><a href='/message/#{k}'>#{k}</a> || <em>#{m[:created].strftime("%m-%d-%Y [%I:%M%p]")}</em> || <b>#{m[:message]}</b> || <span style='color:red'>#{views || 0} views</span>"
+    report << "<li><a href='/message/#{k}'>#{k}</a> || <em>#{m[:created].strftime("%m-%d-%Y [%I:%M%p]")}</em> || <b>#{m[:message]}</b> || <span class='views'>#{views || 0} views</span>"
   end
   
   haml :stats, :locals => {

@@ -1,5 +1,6 @@
 %h1= locals[:message]
 
+%link{:rel=>"stylesheet", :type=>"text/css", :href=>"/css/blowitup.css"}
 %script{:src=>"http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
 :javascript
   var colors = ["red","green","white","blue","orange","grey","yellow","black"]
@@ -12,7 +13,4 @@
     }
   }
   
-  $(document).ready(function(){
-    $("h1").css({"font-size":"300px","font-family":"Helvetica","font-weight":"bold"})
-    setInterval("#{locals[:style]}()", 60 )
-  })
+  setInterval("flicker()", 80 )

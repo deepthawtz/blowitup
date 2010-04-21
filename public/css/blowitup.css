@@ -1,0 +1,12 @@
+* {
+  text-align:center;
+}
+h1 {
+  vertical-align:middle;
+  font-family:Helvetica;
+  word-wrap:normal;
+  font-size:300px;
+  font-weight:bold;
+  line-height:220px;
+  letter-spacing:-18px;
+}
