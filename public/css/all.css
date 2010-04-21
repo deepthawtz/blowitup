@@ -1,18 +1,42 @@
 html {
+  width:100%;
   background-color:#EEE582;
   font-family:"Monaco";
 }
 body {
   text-align:center;
 }
+header {
+  font-family:'Courier';
+}
+header .teal {
+  margin-top:-10px;
+  height:20px;
+  background-color:#A8F4DD;
+}
+header .pink {
+  height:30px;
+  background-color:#FFDFF2;
+}
+header .brown {
+  height:50px;
+  background-color:#7C4E18;
+}
+header .orange {
+  height:10px;
+  background-color:#FF9400;
+}
 header a {
   color:#C4F9FC;
-  font-size:34pt;
-  letter-spacing:-8px;
+  font-family:'Courier';
+  font-size:2.8em;
+  text-shadow: rgba(10, 10, 10, 0.5) 1px 2px 2px;
+  letter-spacing:-1px;
   text-decoration:none;
 }
 header a:hover {
-  text-shadow: rgba(10, 10, 10, 0.5) 1px 2px 2px;
+  color:#DCFBFF;
+  text-shadow: rgba(10, 10, 10, 0.5) 1px 5px 9px;
 }
 a {
   color:red;
@@ -28,13 +52,13 @@ a {
   padding:12px;
   font-size:30pt;
   width:550px;
-  color:red;
+  color:#7C4E18;
   font-family:"Courier";
   font-weight:bold;
   letter-spacing:-1px;
 }
 .blowitup textarea:focus {
-  background-color:#E8FBFF;
+  background-color:#FFDFF2;
 }
 .blowitup .button {
   float:right;
@@ -58,7 +82,7 @@ a {
 }
 .stats {
   margin:0 auto;
-  width:1200px;
+  width:1100px;
 }
 .stats ul {
   border: 3px solid #333;
@@ -77,6 +101,6 @@ a {
 }
 footer {
   clear:both;
-  margin:400px auto;
+  margin:280px auto;
   width:580px;
 }

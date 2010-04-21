@@ -6,11 +6,19 @@
     %script{:src=>"http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
   %body
     %header
+      .teal
+      .pink
+      .brown
+      .orange
       %a{:href=>"/"}
-        %h1 BLOWITUP
+        %p BLOWITUP
 
     = yield
 
     %footer
-      %p Copyright &copy; 2010 Dylan Clendenin &#8226; a <a href="http://ghettochip.com/">Ghettochip Labs</a> joint
+      %img{:src=>"/img/boombox.png"}
+      %br
+      %p a <a href="http://ghettochip.com/">Ghettochip Labs</a> joint
       %script{:src=>"/js/app.js"}
+      <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+      <script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2419530-11");pageTracker._trackPageview();} catch(err) {}</script>
