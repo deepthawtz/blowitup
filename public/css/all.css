@@ -41,12 +41,39 @@ header a:hover {
 a {
   color:red;
 }
+.huh {
+  position:absolute;
+  left:0;
+  margin-top:60px;
+  margin-left:-20px;
+  padding:8px;
+  background-color:#5194DF;
+  border: 2px solid #fff;
+  cursor:pointer;
+  -webkit-transform: rotate(90deg);
+  -webkit-border-radius:6px;
+}
+.huh a {
+  color:#fff;
+  text-decoration:none;
+}
+.huh:hover {
+  margin-left:-15px;
+}
+.info {
+  margin:0 auto;
+}
+.info h2, .info p {
+  margin-left:20%;
+  text-align:left;
+}
 .blowitup {
   margin:0 auto;
   width:625px;
 }
 .blowitup textarea {
   float:left;
+  overflow:hidden;
   border:6px solid #A8F4DD;
   margin:40px;
   padding:12px;

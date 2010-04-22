@@ -1,4 +1,4 @@
-%w{digest/sha1 rubygems sinatra redis}.map {|x| require x}
+%w{digest/sha1 rubygems sinatra redis haml}.map {|x| require x}
 
 before do
   @redis = Redis.new
@@ -31,6 +31,10 @@ get "/message/:sha" do
     :message => message[:message],
     :style => message[:style]
   }
+end
+
+get "/huh" do
+  haml :huh
 end
 
 get "/stats" do
