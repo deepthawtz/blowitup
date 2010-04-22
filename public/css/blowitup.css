@@ -10,3 +10,42 @@ h1 {
   line-height:220px;
   letter-spacing:-18px;
 }
+.word {
+  float:left;
+  line-height:0;
+  background-color:#5CBEF3;
+  border:4px solid #fff;
+  -webkit-border-radius:10px;
+  margin-right:-20px;
+  cursor:pointer;
+  padding:6px;
+}
+.word:hover {
+  color:#F4FFBF;
+  border:8px solid #F4FFBF;
+}
+.word img {
+  cursor:pointer;
+  margin-bottom:-18px;
+}
+.word a {
+  padding:0;
+  margin-bottom:-60px;
+  margin-top:-120px;
+  font-family:Courier;
+  font-size:20pt;
+  letter-spacing:-1px;
+  text-decoration:none;
+  color:#fff;
+}
+.word .small {
+  font-family:Helvetica;
+  font-size:13pt;
+  letter-spacing:2px;
+}
+.word .tag {
+  margin-top:-16px;
+  color:#333;
+  margin-bottom:4px;
+  font-size:12pt;
+}
