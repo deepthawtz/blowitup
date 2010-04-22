@@ -44,7 +44,6 @@ a {
 .huh {
   position:absolute;
   left:0;
-  margin-top:60px;
   margin-left:-20px;
   padding:8px;
   background-color:#5194DF;
@@ -75,6 +74,7 @@ a {
   float:left;
   overflow:hidden;
   border:6px solid #A8F4DD;
+  text-transform:uppercase;
   margin:40px;
   padding:12px;
   font-size:30pt;
