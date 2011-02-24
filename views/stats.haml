@@ -1,8 +1,8 @@
-
 .stats
   %h3= "Total Messages: #{locals[:total]}"
   %ul
-    = locals[:report]
+    - locals[:report].each do |li|
+      = li
 
 :javascript
   $("li:odd").css("background-color", "#ddd")
