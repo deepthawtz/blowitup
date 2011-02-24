@@ -4,6 +4,6 @@ require "sinatra"
 set :env, :production
 disable :run, :reload
 
-require "blowitup"
+require "./blowitup"
 
-run Sinatra::Application
+run Blowitup::App

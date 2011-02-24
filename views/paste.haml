@@ -1,5 +1,5 @@
-%a{:href=>"/message/#{locals[:sha]}"}view your message
+%a{:href=>"#{locals[:url]}"}view your message
 %br
 
 %h3 COPY THIS URL AND PASTE IT FOR THE WORLD
-%input.copynpaste{:type=>"text", :value=>"http://biu.ghettochip.com/message/#{locals[:sha]}"}
+%input.copynpaste{:type=>"text", :value=>"http://biu.ghettochip.com/#{locals[:url]}"}
