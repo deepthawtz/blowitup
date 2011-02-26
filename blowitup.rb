@@ -27,18 +27,22 @@ module Blowitup
     end
 
     post "/" do
-      message = {
-        :message => params["message"].upcase,
-        :created => Time.now
-      }
+      if "" == params[:message].strip!
+        400
+      else
+        message = {
+          :message => params[:message].upcase,
+          :created => Time.now
+        }
 
-      message_sha = sha(message[:message])
-      redis.hset "blowitup:messages", message_sha, Marshal.dump(message)
-      redis.bgsave
+        message_sha = sha(message[:message])
+        redis.hset "blowitup:messages", message_sha, Marshal.dump(message)
+        redis.bgsave
 
-      haml :paste, :locals => {
-        :url => "message/#{message_sha}"
-      }
+        haml :paste, :locals => {
+          :url => "message/#{message_sha}"
+        }
+      end
     end
 
     get "/message/:sha" do
