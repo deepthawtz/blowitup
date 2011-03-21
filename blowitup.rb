@@ -1,9 +1,6 @@
 require File.join(File.dirname(__FILE__), "setup")
 
 module Blowitup
-  def self.redis
-    @redis ||= Redis.new
-  end
 
   class App < Sinatra::Base
     set :public, "#{File.dirname(File.expand_path(__FILE__))}/public"
