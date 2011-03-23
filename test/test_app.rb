@@ -2,7 +2,6 @@ require File.expand_path(File.join(File.dirname(__FILE__), "helper"))
 
 class TestBlowitup < MiniTest::Unit::TestCase
   include Rack::Test::Methods
-  alias_method :response, :last_response
 
   def app
     Blowitup::App.new
@@ -22,4 +21,6 @@ class TestBlowitup < MiniTest::Unit::TestCase
     post "/", :message => "    "
     assert_equal 400, response.status
   end
+
+  alias_method :response, :last_response
 end
