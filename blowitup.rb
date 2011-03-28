@@ -36,7 +36,10 @@ module Blowitup
         redis.hset "blowitup:messages", message_sha, Marshal.dump(message)
         redis.bgsave
 
+        host = request.host
+        host += ":#{request.port}" if host =~ /localhost/
         haml :paste, :locals => {
+          :host => host,
           :url => "message/#{message_sha}"
         }
       end
